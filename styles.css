@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --ff: 'Courier New', Courier, monospace; /*font-family*/
+    --odzadje: #193549;
+    --pisava1: #ffc600;
+    --pisava2: #24649c;
+    --h1:   font-weight: bold;
+            font-size: 64px;
+            line-height:72px;
+            font-family: var(--ff);
+    --p:   font-weight: none;
+           font-size: 18px;
+           line-height:30px;
+           font-family: var(--ff);
+}
+
+/* Basic reset for padding and margins */
+body {
+    max-width: 1280px;
+    margin: 100px auto;
+    background: var(--odzadje);
+    color: var(--pisava1);
+    font: var(--h1);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div {
+    flex: 1;
+}
+
+h1 {
+    background-color: var(--odzadje);
+    color: var(--pisava1);
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    flex-grow: 0;
+}
+
+p {
+    font: var(--p)
+}
+
+a {
+    background: var(--pisava2);
+    color: var(--pisava1);
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+.drugi-gumb {
+    background: none;
+    border: solid 2px var(--pisava1);
+}
+
+
+/* to kar človek piše */
+#terminal-input {
+    background-color: var(--odzadje);
+    color: var(--pisava1);
+    border: none;
+    resize: none;
+    outline: none;
+    flex-grow: 0;
+}
+
+/* izpis ukazov ko napišeš help ali karkoli  */
+#terminal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--odzadje);
+    color: var(--pisava1);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+/* Terminal output area */
+#terminal-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    white-space: pre-wrap; /* Preserve white space */
+}
